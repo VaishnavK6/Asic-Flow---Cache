@@ -4,12 +4,12 @@ This project implements a synthesizable 4-way set-associative cache memory using
 
 ## 📁 Project Structure
 
-  ─ cache_memory.v # Core cache logic: tag comparison, data array, valid bit tracking
-  ─ fifo_replacement.v # FIFO-based replacement policy for the cache
-  ─ cache_top.v # Top-level module connecting all components
-  ─ cache_tb.v # Testbench for simulating the cache behavior
-  ─ config.mk # OpenLane configuration file (clock, utilization, etc.)
-  ─ Screenshot*.png # Snapshots from synthesis, layout, or simulation
+  - cache_memory.v # Core cache logic: tag comparison, data array, valid bit tracking
+  - fifo_replacement.v # FIFO-based replacement policy for the cache
+  - cache_top.v # Top-level module connecting all components
+  - cache_tb.v # Testbench for simulating the cache behavior
+  - config.mk # OpenLane configuration file (clock, utilization, etc.)
+  - Screenshot*.png # Snapshots from synthesis, layout, or simulation
 
 ## ⚙️ Features
 
@@ -28,13 +28,13 @@ Run `cache_tb.v` in any Verilog simulator (e.g., ModelSim, Icarus Verilog, Vivad
 Make sure the repo is placed inside your OpenLane design directory:
 
 openlane/
-  ─ designs/
-  ─ cache_top/
-  ─ config.mk
-  ─ src/
-  ─ cache_top.v
-  ─ cache_memory.v
-  ─ fifo_replacement.v
+  - designs/
+  - cache_top/
+  - config.mk
+  - src/
+  - cache_top.v
+  - cache_memory.v
+  - fifo_replacement.v
 
 Then launch OpenLane and run:
 
