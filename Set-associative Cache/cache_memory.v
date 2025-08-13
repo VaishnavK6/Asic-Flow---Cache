@@ -39,7 +39,7 @@ module cache_memory (
 
     // Address decoding
     wire [4:0] index = address[9:5];   // Set index (5 bits for 32 sets)
-    wire [21:0] tag_in = address[31:10]; // Tag (remaining upper 22 bits)
+    wire [26:0] tag_in = address[31:10]; // Tag (remaining upper 27 bits)
 
     integer i, j;
 
