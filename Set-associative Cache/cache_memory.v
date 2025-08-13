@@ -34,12 +34,12 @@ module cache_memory (
     // Cache Storage:
     // Each set has 4 ways, each with valid, tag, and data
     reg valid [NUM_SETS-1:0][NUM_WAYS-1:0];     // Valid bits
-    reg [26:0] tag [NUM_SETS-1:0][NUM_WAYS-1:0];// 27-bit tag (from address[31:10])
+    reg [24:0] tag [NUM_SETS-1:0][NUM_WAYS-1:0];// 27-bit tag (from address[31:10])
     reg [31:0] data [NUM_SETS-1:0][NUM_WAYS-1:0];// 32-bit data word per line
 
     // Address decoding
-    wire [4:0] index = address[9:5];   // Set index (5 bits for 32 sets)
-    wire [26:0] tag_in = address[31:10]; // Tag (remaining upper 27 bits)
+    wire [4:0] index = address[6:2];   // Set index (5 bits for 32 sets)
+    wire [24:0] tag_in = address[31:7]; // Tag (remaining upper 25 bits)
 
     integer i, j;
 
